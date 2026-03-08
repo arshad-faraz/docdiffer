@@ -1,0 +1,54 @@
+@import 'tokens.css';
+
+body { overflow: hidden; }
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875em;
+  background: var(--bg-elevated);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--bg-elevated);
+  padding: var(--spacing-md);
+  border-radius: 6px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+::selection {
+  background: var(--move-border);
+  color: var(--bg-primary);
+}

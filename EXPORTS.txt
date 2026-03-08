@@ -1,0 +1,38 @@
+DocDiffer UI Components - Export Summary
+
+src/ui/app.ts
+  - AppStateManager (class)
+  - appState (global instance)
+
+src/ui/upload-zone.ts
+  - createUploadZone() -> HTMLElement
+
+src/ui/side-by-side.ts
+  - createSideBySideView(diffs: BlockDiff[], filters: FilterState) -> HTMLElement
+
+src/ui/unified-view.ts
+  - createUnifiedView(diffs: BlockDiff[], filters: FilterState) -> HTMLElement
+
+src/ui/metadata-panel.ts
+  - createMetadataPanel(leftModel: DocumentModel, rightModel: DocumentModel) -> HTMLElement
+
+src/ui/toolbar.ts
+  - createToolbar() -> HTMLElement
+
+src/ui/stats-bar.ts
+  - createStatsBar(stats: DiffStats) -> HTMLElement
+
+src/ui/toc-panel.ts
+  - createTOCPanel(headings: HeadingNode[]) -> HTMLElement
+  - createTOCPanelWithControls(headings: HeadingNode[]) -> HTMLElement
+
+src/ui/search-overlay.ts
+  - createSearchOverlay(diffs: BlockDiff[]) -> HTMLElement
+
+All components:
+- Return vanilla HTMLElement objects (no frameworks)
+- Use BEM-style CSS class naming conventions
+- Support TypeScript with proper type annotations
+- Include error handling and accessibility features
+- Lazy-load heavy dependencies (Fuse.js)
+- Follow the component factory pattern
