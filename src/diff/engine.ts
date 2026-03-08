@@ -24,7 +24,7 @@ export function diff(leftModel: DocumentModel, rightModel: DocumentModel): DiffR
   blockDiffs = applyInlineDiffs(blockDiffs);
 
   // Stage 5: Metadata diffing (independent)
-  const metadataDiff = diffMetadata(normalizedLeft, normalizedRight);
+  // const metadataDiff = diffMetadata(normalizedLeft, normalizedRight); // TODO: integrate metadata into result
 
   // Calculate statistics
   const stats = calculateStats(blockDiffs);

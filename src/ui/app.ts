@@ -2,7 +2,7 @@
  * Root app state and view routing
  */
 
-import type { AppState, ViewMode, FilterState, File as FileType } from '../types';
+import type { AppState, ViewMode, FilterState } from '../types';
 
 export class AppStateManager {
   private state: AppState;

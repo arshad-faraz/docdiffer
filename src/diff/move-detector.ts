@@ -3,7 +3,7 @@
  * Uses similarity matching to classify pairs as 'moved'
  */
 
-import type { BlockDiff, DocumentBlock } from '../types';
+import type { BlockDiff } from '../types';
 import { jaroWinklerSimilarity } from '../utils/fingerprint';
 
 const MOVE_SIMILARITY_THRESHOLD = 0.75;

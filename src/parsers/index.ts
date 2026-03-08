@@ -2,7 +2,7 @@
  * Parser factory and registry
  */
 
-import type { DocumentModel, FileFormat } from '../types';
+import type { DocumentModel } from '../types';
 import { parseText } from './text.parser';
 import { parseHTML } from './html.parser';
 import { parseDOCX } from './docx.parser';

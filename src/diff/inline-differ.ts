@@ -11,7 +11,7 @@ export function applyInlineDiffs(diffs: BlockDiff[]): BlockDiff[] {
     if (diff.type === 'modified' && diff.left && diff.right) {
       const wordDiffs = diffWords(diff.left.text, diff.right.text);
 
-      const inlineDiff: InlineChange[] = wordDiffs.map((d) => ({
+      const inlineDiff: InlineChange[] = wordDiffs.map((d: any) => ({
         type: d.added ? 'added' : d.removed ? 'deleted' : 'unchanged',
         text: d.value,
       }));

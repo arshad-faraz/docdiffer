@@ -43,7 +43,7 @@ export function parseHTML(content: string): DocumentModel {
     headings,
     links,
     images,
-    tables: extractTables(doc),
+    tables: extractTables(),
     metadata: extractMetadata(doc),
   };
 }
@@ -299,10 +299,9 @@ function removeConfluenceNoise(html: string): string {
   return cleaned;
 }
 
-function extractTables(doc: Document) {
-  const tables = [];
+function extractTables(): Array<any> {
   // Placeholder for table extraction
-  return tables;
+  return [];
 }
 
 function extractMetadata(doc: Document): Record<string, string> {
