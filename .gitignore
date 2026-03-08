@@ -19,6 +19,7 @@ dist-standalone
 .idea
 *.swp
 *.swo
+*.iml
 
 # Environment
 .env
