@@ -13,7 +13,7 @@ export async function parsePDF(arrayBuffer: ArrayBuffer, fileName: string): Prom
   // Set up worker for PDF.js
   try {
     // Try to load worker from CDN or local path
-    const workerUrl = new URL('pdfjs-dist/build/pdf.worker.min.js', import.meta.url).href;
+    const workerUrl = new URL(/* @vite-ignore */ 'pdfjs-dist/build/pdf.worker.min.js', import.meta.url).href;
     pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl;
   } catch {
     // Fallback: worker will be loaded on demand
