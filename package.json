@@ -18,7 +18,6 @@
     "pdfjs-dist": "^4.0.379"
   },
   "devDependencies": {
-    "@types/dompurify": "^3.0.5",
     "typescript": "^5.3.3",
     "vite": "^5.0.8"
   }
