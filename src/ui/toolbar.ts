@@ -78,7 +78,6 @@ export function createToolbar(filters: FilterState): HTMLElement {
   toolbar.appendChild(viewSwitcher);
   toolbar.appendChild(filterPills);
   toolbar.appendChild(searchInput);
-  toolbar.appendChild(exportBtn);
 
   return toolbar;
 }
