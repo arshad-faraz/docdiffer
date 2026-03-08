@@ -5,7 +5,7 @@
 import { appState } from './app';
 import { parseFile } from '../parsers';
 import { diff } from '../diff/engine';
-import { isValidFileType, getFileTypeError } from '../utils/file-reader';
+import { getFileTypeError } from '../utils/file-reader';
 
 export function createUploadZone(): HTMLElement {
   const zone = document.createElement('div');

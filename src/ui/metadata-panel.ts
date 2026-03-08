@@ -24,7 +24,6 @@ export function createMetadataPanel(
 
   // Links
   const linksSection = createSection('Links');
-  const linksContent = document.createElement('div');
   const leftLinks = leftModel.links.map((l) => `${l.label} (${l.url})`);
   const rightLinks = rightModel.links.map((l) => `${l.label} (${l.url})`);
   const linksComparison = createMetadataComparison(leftLinks, rightLinks);

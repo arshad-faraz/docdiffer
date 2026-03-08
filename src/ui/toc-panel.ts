@@ -61,12 +61,15 @@ export function createTOCPanel(headings: HeadingNode[]): HTMLElement {
         const childrenUl = renderHeadings(node.children, depth + 1);
         li.appendChild(childrenUl);
 
-        toggle?.addEventListener('click', (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          toggle.classList.toggle('expanded');
-          childrenUl.classList.toggle('hidden');
-        });
+        const toggleButton = link.querySelector('.toc-toggle') as HTMLElement;
+        if (toggleButton) {
+          toggleButton.addEventListener('click', (e: Event) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleButton.classList.toggle('expanded');
+            childrenUl.classList.toggle('hidden');
+          });
+        }
       }
 
       ul.appendChild(li);

@@ -7,7 +7,6 @@ import { normalizeModel } from './normalizer';
 import { diffBlocks } from './block-differ';
 import { detectMoves } from './move-detector';
 import { applyInlineDiffs } from './inline-differ';
-import { diffMetadata } from './metadata-differ';
 
 export function diff(leftModel: DocumentModel, rightModel: DocumentModel): DiffResult {
   // Stage 1: Normalize
