@@ -10,16 +10,12 @@ export async function parsePDF(arrayBuffer: ArrayBuffer, fileName: string): Prom
   // Lazy load PDF.js to minimize bundle size
   const pdfjsLib = await import('pdfjs-dist');
 
-  // Set up worker for PDF.js
   try {
-    // Try to load worker from CDN or local path
-    const workerUrl = new URL(/* @vite-ignore */ 'pdfjs-dist/build/pdf.worker.min.js', import.meta.url).href;
-    pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl;
-  } catch {
-    // Fallback: worker will be loaded on demand
-  }
+    // Set worker source if available
+    if (pdfjsLib.GlobalWorkerOptions) {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+    }
 
-  try {
     const pdf = await pdfjsLib.getDocument(new Uint8Array(arrayBuffer)).promise;
     const blocks: DocumentBlock[] = [];
 
